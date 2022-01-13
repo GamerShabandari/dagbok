@@ -88,10 +88,15 @@ function renderPage() {
             let newEntryCDate = document.createElement("h3")
             newEntryCDate.classList = "dateStyle"
 
+            let entryDeleteBtn = document.createElement("button");
+            entryDeleteBtn.classList = "deleteBtn";
+            entryDeleteBtn.innerText = "Radera inlägg";
+
+
             newEntryHeadline.innerText = dagbokEntry.headline
             newEntryText.innerText = dagbokEntry.text;
             newEntryCDate.innerText = dagbokEntry.date;
-            newEntryContainer.append(newEntryHeadline, newEntryText, newEntryCDate);
+            newEntryContainer.append(newEntryHeadline, newEntryText, newEntryCDate, entryDeleteBtn);
             myEntries.append(newEntryContainer);
 
         };
@@ -102,12 +107,26 @@ function renderPage() {
 
 myEntries.addEventListener("click", function (evt) {
 
+    let checkIfDelete = evt.target.classList.value;
+    
     let chosenEntry = evt.target.parentElement.id;
 
-    if (chosenEntry >= 0) {
+    if (chosenEntry >= 0 && checkIfDelete != "deleteBtn") {
 
         renderPreview(chosenEntry);
 
+    } else if (checkIfDelete === "deleteBtn" ) {
+
+        console.log("du vill radera");
+
+        myDagbokDeserialized = JSON.parse(localStorage.getItem("myDagbok"));
+
+        myDagbokDeserialized.splice(chosenEntry,1)
+
+        localStorage.setItem("myDagbok", JSON.stringify(myDagbokDeserialized));
+
+        renderPage();
+        
     }
 
 });
