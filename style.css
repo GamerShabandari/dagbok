@@ -116,7 +116,7 @@ main {
     border-radius: 15px;
     padding: 10px;
     margin: 20px;
-
+    height: fit-content;
 }
 .entryContainer:hover {
     background-color:rgb(255, 222, 164);
@@ -168,6 +168,8 @@ main {
     margin: 5px;
     padding: 10px;
     letter-spacing: 1px;
+    overflow: hidden;
+    height: fit-content;
 }
 
 .dateStyle{
