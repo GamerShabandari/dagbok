@@ -1,0 +1,266 @@
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: darkseagreen;
+    color: blanchedalmond;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: oldlace;
+    font-family: Arial, Helvetica, sans-serif; 
+    padding: 15px;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#inputSection {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 50%;
+    min-height: 90%;
+}
+
+#inputSection button{
+
+    background-color:linen;
+    border: 0;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 0.8rem;
+    padding: 5px;
+    color: darkslategray;
+    text-align: center;
+
+}
+
+#inputSection button:hover{
+
+    background-color: darkseagreen;
+}
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: moccasin;
+    opacity: 8;
+    border: 0px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#dagbokHeadline {
+    width: 90%;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color:linen;
+    opacity: 9;
+    color: darkseagreen;
+    border-radius: 10px;
+    border: 0px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+#dagbokText {
+    width: 90%;
+    height: 20vh;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkseagreen;
+    background-color: linen;
+    opacity: 9;
+    border-radius: 10px;
+    border: 0px;
+    margin: 5px;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+.entryContainer {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color:moccasin;
+    opacity: 8;
+    border: 0px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px;
+
+}
+.entryContainer:hover {
+    background-color:rgb(255, 222, 164);
+}
+
+#myEntries {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headlineStyle{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: blanchedalmond;
+    opacity: 9;
+    color: darkseagreen;
+    border-radius: 10px;
+    border: 0px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+.textStyle{
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    height: 20vh;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkseagreen;
+    opacity: 9;
+    border-radius: 10px;
+    border: 0px;
+    margin: 5px;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+.dateStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    font-size: 0.6rem;
+    padding: 15px;
+    letter-spacing: 3px;
+    color: darkseagreen;
+}
+
+#previewContainer{
+
+    width: 50%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#previewSection {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 90%;
+    background-color:moccasin;
+    opacity: 8;
+    border: 0px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px;
+}
+
+#previewSection input{
+
+    width: 90%;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color:linen;
+    opacity: 9;
+    color: darkseagreen;
+    border-radius: 10px;
+    border: 0px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+
+}
+
+#previewSection textarea{
+   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    min-height: 50%;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkseagreen;
+    background-color:linen;
+    opacity: 9;
+    border-radius: 10px;
+    border: 0px;
+    margin: 5px;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+#previewSection button{
+    background-color:linen;
+    border: 0;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 5px;
+    color: darkslategray;
+    text-align: center;
+}
+#previewSection button:hover{
+    background-color: darkseagreen;
+}
+
+    
+
+
+    
