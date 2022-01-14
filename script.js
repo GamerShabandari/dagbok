@@ -92,7 +92,7 @@ function renderPage() {
 
             let entryDeleteBtn = document.createElement("button");
             entryDeleteBtn.classList = "deleteBtn";
-            entryDeleteBtn.innerText = "Radera inlägg";
+            entryDeleteBtn.innerText = "X";
 
 
             newEntryHeadline.innerText = dagbokEntry.headline

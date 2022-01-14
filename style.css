@@ -132,16 +132,17 @@ aside{
     flex-direction: column;
     align-items: center;
     width: 90%;
-    background-color:moccasin;
+    background-color:linen;
     opacity: 8;
     border: 0px;
     border-radius: 15px;
     padding: 10px;
     margin: 20px;
     height: fit-content;
+    border: moccasin 2px solid;
 }
 .entryContainer:hover {
-    background-color:rgb(255, 222, 164);
+    border: darkseagreen 2px solid;
 }
 
 #myEntries {
@@ -154,11 +155,11 @@ aside{
 
 #myEntries button{
 
-    background-color:linen;
+    background-color:lightsalmon;
     border: 0;
     border-radius: 5px;
-    width: 100px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     font-size: 0.8rem;
     padding: 5px;
     color: darkslategray;
@@ -180,7 +181,7 @@ aside{
     height: 2rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     opacity: 9;
     color: darkseagreen;
     border-radius: 10px;
@@ -190,6 +191,7 @@ aside{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
+    overflow: hidden;
     
 }
 
@@ -199,7 +201,6 @@ aside{
     justify-content: center;
     align-items: flex-start;
     width: 90%;
-    height: 20vh;
     font-size: 1rem;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
@@ -234,7 +235,7 @@ aside{
     justify-content: center;
 
     width: 80vw;
-    height: 80vh;
+    height: 90vh;
     padding: 10px;
     margin: 0px;
     display: flex;
@@ -273,6 +274,7 @@ aside{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
+    overflow: hidden;
 
 }
 
@@ -294,6 +296,7 @@ aside{
     margin: 5px;
     padding: 10px;
     letter-spacing: 1px;
+    overflow: hidden;
 }
 
 #previewSection button{
