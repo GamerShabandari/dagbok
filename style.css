@@ -7,7 +7,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: oldlace;
+    background-color: ivory;
 }
 
 header {
@@ -18,13 +18,13 @@ header {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 10vh;
-    background-color: darkseagreen;
-    color: blanchedalmond;
+    height: 15vh;
+    background-color: ivory;
+    color: darkseagreen;
     font-size: 3rem;
     font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
     padding: 10px;
-    border-radius: 5px;
 }
 
 main {
@@ -32,9 +32,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: oldlace;
+    background-color:ivory;
     font-family: Arial, Helvetica, sans-serif; 
-    padding: 15px;
+    padding: 30px;
     width: 80vw;
     min-height: 100vh;
 }
@@ -62,7 +62,7 @@ aside{
 
 #inputSection button{
 
-    background-color:linen;
+    background-color:moccasin;
     border: 0;
     border-radius: 5px;
     width: 100px;
@@ -71,12 +71,14 @@ aside{
     padding: 5px;
     color: darkslategray;
     text-align: center;
+    margin: 5px;
 
 }
 
 #inputSection button:hover{
 
-    background-color: darkseagreen;
+    background-color: darkslategray;
+    color: ivory;
 }
 
 .fieldset {
@@ -85,11 +87,12 @@ aside{
     align-items: center;
     width: 90%;
     height: 100%;
-    background-color: moccasin;
+    background-color: linen;
     opacity: 8;
     border: 0px;
     border-radius: 15px;
     padding: 10px;
+    border: 3px solid moccasin;
 }
 
 #dagbokHeadline {
@@ -98,16 +101,16 @@ aside{
     height: 2.5rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color:linen;
+    background-color:ivory;
     opacity: 9;
-    color: darkseagreen;
+    color: darkslategray;
     border-radius: 10px;
-    border: 0px;
+    border: 2px solid moccasin;
     margin: 5px;
     padding: 10px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
 }
 
 #dagbokText {
@@ -116,14 +119,15 @@ aside{
     font-size: 1rem;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
-    color: darkseagreen;
-    background-color: linen;
+    color: darkslategray;
+    background-color: ivory;
     opacity: 9;
     border-radius: 10px;
-    border: 0px;
+    border: 2px solid moccasin;
     margin: 5px;
     padding: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
 }
 
 .entryContainer {
@@ -132,17 +136,17 @@ aside{
     flex-direction: column;
     align-items: center;
     width: 90%;
-    background-color:linen;
+    background-color:oldlace;
     opacity: 8;
     border: 0px;
     border-radius: 15px;
     padding: 10px;
     margin: 20px;
     height: fit-content;
-    border: moccasin 2px solid;
+    border: moccasin 3px solid;
 }
 .entryContainer:hover {
-    border: darkseagreen 2px solid;
+    border: darkslategray 3px solid;
 }
 
 #myEntries {
@@ -155,7 +159,7 @@ aside{
 
 #myEntries button{
 
-    background-color:lightsalmon;
+    background-color:moccasin;
     border: 0;
     border-radius: 5px;
     width: 30px;
@@ -169,28 +173,29 @@ aside{
 
 #myEntries button:hover{
 
-    background-color: darkseagreen;
+    background-color: salmon;
 }
 
 .headlineStyle{
     
     display: flex;
+    background-color: moccasin;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: fit-content;
     height: 2rem;
     font-size: 1.2rem;
     font-weight: bold;
-    /* background-color: blanchedalmond; */
     opacity: 9;
-    color: darkseagreen;
+    color: darkslategray;
     border-radius: 10px;
     border: 0px;
     margin: 5px;
-    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     overflow: hidden;
     
 }
@@ -204,15 +209,21 @@ aside{
     font-size: 1rem;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
-    color: darkseagreen;
+    color: darkslategray;
     opacity: 9;
     border-radius: 10px;
     border: 0px;
     margin: 5px;
-    padding: 10px;
+    padding: 30px;
     letter-spacing: 1px;
+    word-spacing: 2px;
     overflow: hidden;
     height: fit-content;
+}
+
+.textStyle:hover{
+    background-color: darkslategray;
+    color: ivory;
 }
 
 .dateStyle{
@@ -223,7 +234,7 @@ aside{
     font-size: 0.6rem;
     padding: 15px;
     letter-spacing: 3px;
-    color: darkseagreen;
+    color: darkslategray;
 }
 
 #previewContainer{
