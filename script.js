@@ -1,5 +1,7 @@
 const inputSection = document.getElementById("inputSection");
-const previewContainer = document.getElementById("previewContainer");
+// const previewContainer = document.getElementById("previewContainer");
+const aside = document.getElementById("aside");
+
 
 let myEntries = document.getElementById("myEntries");
 
@@ -140,9 +142,13 @@ function renderPreview(chosenEntryToPreview) {
 
     let thisEntry = myDagbokDeserialized[chosenEntryToPreview];
 
+    let previewContainer = document.createElement("div");
+    previewContainer.id = "previewContainer";
+
     let previewSection = document.createElement("div");
     previewSection.id = "previewSection";
 
+    aside.append(previewContainer)
     previewContainer.append(previewSection);
 
     let entryPreviewHeadline = document.createElement("input");
@@ -156,17 +162,19 @@ function renderPreview(chosenEntryToPreview) {
 
     previewSection.append(entryPreviewHeadline, entryPreview, updateBtn);
 
-    gsap.from("#previewSection", { x: +1000, duration: 1, ease: "power2.in" });
+    gsap.from("#previewSection", { x: +2000, duration: 1, ease: "power2.in" });
 
-    gsap.to("#inputSection", { x: -1000, duration: 1, ease: "power2.in" });
+    // gsap.to("#myEntries", { x: -2000, duration: 1, ease: "power2.in" });
 
 
 
     updateBtn.addEventListener("click", function () {
 
-        gsap.to("#previewSection", { x: +1000, duration: 1, ease: "power2.in" });
+        
 
-        gsap.to("#inputSection", { x: "auto", duration: 1, ease: "power2.in" });
+        gsap.to("#previewContainer", { x: +2000, duration: 1, ease: "power2.in" });
+
+        // gsap.to("#myEntries", { x: "auto", duration: 1, ease: "power2.in" });
 
         let updateDagbokEntry =
 
@@ -183,11 +191,15 @@ function renderPreview(chosenEntryToPreview) {
 
         setInterval(() => {
 
-            previewSection.remove();
+            previewContainer.remove();
 
         }, 1000);
 
         renderPage();
+
+        
+
+        
 
     });
 };
