@@ -217,6 +217,7 @@ aside{
     word-spacing: 2px;
     overflow: hidden;
     height: fit-content;
+    background-color: rgba(47, 79, 79, 0.2);
 }
 
 .textStyle:hover{
