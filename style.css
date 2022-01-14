@@ -20,7 +20,7 @@ header {
     width: 100vw;
     height: 15vh;
     background-color: ivory;
-    color: darkseagreen;
+    color: darkslategray;
     font-size: 3rem;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 10px;
@@ -261,7 +261,7 @@ aside{
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color:moccasin;
+    background-color:darkslategray;
     opacity: 8;
     border: 0px;
     border-radius: 15px;
@@ -277,7 +277,7 @@ aside{
     font-weight: bold;
     background-color:linen;
     opacity: 9;
-    color: darkseagreen;
+    color: darkslategray;
     border-radius: 10px;
     border: 0px;
     margin: 5px;
@@ -299,7 +299,7 @@ aside{
     font-size: 1rem;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
-    color: darkseagreen;
+    color: darkslategray;
     background-color:linen;
     opacity: 9;
     border-radius: 10px;
@@ -324,6 +324,7 @@ aside{
 }
 #previewSection button:hover{
     background-color: darkseagreen;
+    color: ivory;
 }
 
     
