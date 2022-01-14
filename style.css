@@ -273,7 +273,7 @@ aside{
     height: 2.5rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color:linen;
+    background-color:ivory;
     opacity: 9;
     color: rgba(47, 79, 79, 0.822);
     border-radius: 10px;
@@ -298,7 +298,7 @@ aside{
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(47, 79, 79, 0.822);
-    background-color:linen;
+    background-color:ivory;
     opacity: 9;
     border-radius: 10px;
     border: 0px;
@@ -309,7 +309,7 @@ aside{
 }
 
 #previewSection button{
-    background-color:linen;
+    background-color:ivory;
     border: 0;
     border-radius: 5px;
     width: 100px;
