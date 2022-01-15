@@ -1,7 +1,5 @@
 const inputSection = document.getElementById("inputSection");
-// const previewContainer = document.getElementById("previewContainer");
 const aside = document.getElementById("aside");
-
 
 let myEntries = document.getElementById("myEntries");
 
@@ -24,7 +22,7 @@ dagbokBtn.addEventListener("click", function () {
         {
             headline: dagbokHeadline.value,
             text: dagbokText.value,
-            date: new Date()
+            date: new Date().toLocaleDateString() + " - " + new Date().toLocaleTimeString()
 
         }
 
@@ -94,11 +92,20 @@ function renderPage() {
             entryDeleteBtn.classList = "deleteBtn";
             entryDeleteBtn.innerText = "X";
 
+            
+            let editBtnIcon = document.createElement("img");
+            editBtnIcon.src = "./img/edit.png";
+            editBtnIcon.width = "30"
+            editBtnIcon.alt = "edit icon";
+            editBtnIcon.classList = "editBtn";
+            
+            
+
 
             newEntryHeadline.innerText = dagbokEntry.headline
             newEntryText.innerText = dagbokEntry.text;
             newEntryCDate.innerText = dagbokEntry.date;
-            newEntryContainer.append(newEntryHeadline, newEntryText, newEntryCDate, entryDeleteBtn);
+            newEntryContainer.append(newEntryHeadline, newEntryText, newEntryCDate, editBtnIcon, entryDeleteBtn);
             myEntries.append(newEntryContainer);
 
         };
@@ -109,21 +116,21 @@ function renderPage() {
 
 myEntries.addEventListener("click", function (evt) {
 
-    let checkIfDelete = evt.target.classList.value;
-    
-    let chosenEntry = evt.target.parentElement.id;
+    let usersClickTarget = evt.target.classList.value;
 
-    if (chosenEntry >= 0 && checkIfDelete != "deleteBtn") {
+    if (usersClickTarget === "editBtn") {
 
-        renderPreview(chosenEntry);
+        let toChange = evt.target.parentElement.id;
 
-    } else if (checkIfDelete === "deleteBtn" ) {
+        renderPreview(toChange);
 
-        console.log("du vill radera");
+    } else if (usersClickTarget === "deleteBtn" ) {
+
+        let toDelete = evt.target.parentElement.id;
 
         myDagbokDeserialized = JSON.parse(localStorage.getItem("myDagbok"));
 
-        myDagbokDeserialized.splice(chosenEntry,1)
+        myDagbokDeserialized.splice(toDelete,1)
 
         localStorage.setItem("myDagbok", JSON.stringify(myDagbokDeserialized));
 
@@ -158,30 +165,24 @@ function renderPreview(chosenEntryToPreview) {
     entryPreview.value = thisEntry.text;
     let updateBtn = document.createElement("button");
     updateBtn.id = "updateBtn";
-    updateBtn.innerText = "Update"
+    updateBtn.innerText = "Spara ändringar"
 
     previewSection.append(entryPreviewHeadline, entryPreview, updateBtn);
 
     gsap.from("#previewSection", { x: +2000, duration: 1, ease: "power2.in" });
 
-    // gsap.to("#myEntries", { x: -2000, duration: 1, ease: "power2.in" });
-
-
 
     updateBtn.addEventListener("click", function () {
-
-        
+  
 
         gsap.to("#previewContainer", { x: +2000, duration: 1, ease: "power2.in" });
-
-        // gsap.to("#myEntries", { x: "auto", duration: 1, ease: "power2.in" });
 
         let updateDagbokEntry =
 
         {
             headline: entryPreviewHeadline.value,
             text: entryPreview.value,
-            date: new Date()
+            date: new Date().toLocaleDateString() + " - " + new Date().toLocaleTimeString()
 
         }
 
@@ -196,10 +197,6 @@ function renderPreview(chosenEntryToPreview) {
         }, 1000);
 
         renderPage();
-
-        
-
-        
 
     });
 };
