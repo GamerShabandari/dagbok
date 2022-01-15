@@ -9,6 +9,8 @@ const dagbokBtn = document.getElementById("dagbokBtn");
 
 window.onload = renderPage();
 
+// knapp som lägger till nytt inlägg på sidan och i localstorage
+
 dagbokBtn.addEventListener("click", function () {
 
     myDagbokSerialized = localStorage.getItem("myDagbok");
@@ -56,6 +58,9 @@ dagbokBtn.addEventListener("click", function () {
 
 });
 
+
+// funktion som läser av array i localstorage och renderar sidan med alla inlägg
+
 function renderPage() {
 
     dagbokHeadline.value = "";
@@ -64,8 +69,6 @@ function renderPage() {
     myDagbokSerialized = localStorage.getItem("myDagbok");
 
     if (myDagbokSerialized === null) {
-
-        
 
 
     } else if (myDagbokSerialized != null) {
@@ -99,8 +102,6 @@ function renderPage() {
             editBtnIcon.alt = "edit icon";
             editBtnIcon.classList = "editBtn";
             
-            
-
 
             newEntryHeadline.innerText = dagbokEntry.headline
             newEntryText.innerText = dagbokEntry.text;
@@ -113,6 +114,8 @@ function renderPage() {
     };
 
 };
+
+// avgör om användaren vill radera eller redigera ett tidigare inlägg 
 
 myEntries.addEventListener("click", function (evt) {
 
@@ -141,6 +144,7 @@ myEntries.addEventListener("click", function (evt) {
 });
 
 
+// om användaren valt att redigera ett inlägg så kommer vi hit och sparar sedan ändringarna i localstorage och uppdaterar sidan
 
 function renderPreview(chosenEntryToPreview) {
 
