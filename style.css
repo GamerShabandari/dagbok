@@ -175,7 +175,7 @@ aside{
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 48%;
+    left: 49%;
     background-color:rgba(47, 79, 79, 0.822);
     border: 0;
     border-radius: 50px;
@@ -191,7 +191,7 @@ aside{
 #myEntries button:hover{
 
     background-color: salmon;
-    color: darkslategray;
+    color: ivory;
 }
 
 .headlineStyle{
@@ -253,6 +253,8 @@ aside{
 #previewContainer{
 
     position: absolute;
+    position: fixed;
+    top: 0;
     z-index: 98;
     display: flex;
     justify-content: center;

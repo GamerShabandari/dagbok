@@ -19,6 +19,8 @@ dagbokBtn.addEventListener("click", function () {
 
         let myDagbokDeserialized = JSON.parse(localStorage.getItem("myDagbok"));
 
+       
+
         let newDagbokEntry =
 
         {
@@ -29,6 +31,7 @@ dagbokBtn.addEventListener("click", function () {
         }
 
         myDagbokDeserialized.push(newDagbokEntry);
+
 
         localStorage.setItem("myDagbok", JSON.stringify(myDagbokDeserialized));
 
@@ -44,7 +47,7 @@ dagbokBtn.addEventListener("click", function () {
         {
             headline: dagbokHeadline.value,
             text: dagbokText.value,
-            date: new Date()
+            date: new Date().toLocaleDateString() + " - " + new Date().toLocaleTimeString()
 
         }
 
@@ -77,7 +80,7 @@ function renderPage() {
 
         myDagbokDeserialized = JSON.parse(localStorage.getItem("myDagbok"));
 
-        for (let i = 0; i < myDagbokDeserialized.length; i++) {
+        for (var i = myDagbokDeserialized.length - 1; i >= 0; i--) {
             let dagbokEntry = myDagbokDeserialized[i];
 
             let newEntryContainer = document.createElement("div")
@@ -190,7 +193,9 @@ function renderPreview(chosenEntryToPreview) {
 
         }
 
-        myDagbokDeserialized.splice(chosenEntryToPreview, 1, updateDagbokEntry);
+        myDagbokDeserialized.splice(chosenEntryToPreview, 1);
+
+        myDagbokDeserialized.push(updateDagbokEntry);
 
         localStorage.setItem("myDagbok", JSON.stringify(myDagbokDeserialized));
 
@@ -204,7 +209,3 @@ function renderPreview(chosenEntryToPreview) {
 
     });
 };
-
-
-
-
