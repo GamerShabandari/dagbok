@@ -15,7 +15,24 @@ dagbokBtn.addEventListener("click", function () {
 
     myDagbokSerialized = localStorage.getItem("myDagbok");
 
-    if (myDagbokSerialized) {
+    if (dagbokHeadline.value === "" || dagbokText.value === "" ) {
+
+       if (dagbokHeadline.value === "") {
+
+        dagbokHeadline.style.backgroundColor = "palevioletred";
+
+           
+       }
+       if (dagbokText.value === "") {
+
+        dagbokText.style.backgroundColor = "palevioletred";
+           
+       }
+
+        
+        
+        
+    } else if (myDagbokSerialized) {
 
         let myDagbokDeserialized = JSON.parse(localStorage.getItem("myDagbok"));
 
@@ -68,6 +85,11 @@ function renderPage() {
 
     dagbokHeadline.value = "";
     dagbokText.value = "";
+
+    dagbokHeadline.style.backgroundColor = "ivory";
+    dagbokText.style.backgroundColor = "ivory";
+
+    
 
     myDagbokSerialized = localStorage.getItem("myDagbok");
 

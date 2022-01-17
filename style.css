@@ -117,9 +117,6 @@ aside{
     transition: all;
     transition-duration: 0.3s;
 }
-#dagbokHeadline:hover{
-    background-color:azure;
-}
 
 #dagbokText {
     width: 90%;
@@ -138,9 +135,7 @@ aside{
     transition: all;
     transition-duration: 0.3s;
 }
-#dagbokText:hover{
-    background-color:azure;
-}
+
 
 .editBtn {
     display: inline-flex;
