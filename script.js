@@ -19,13 +19,15 @@ dagbokBtn.addEventListener("click", function () {
 
        if (dagbokHeadline.value === "") {
 
-        dagbokHeadline.style.backgroundColor = "palevioletred";
+        dagbokHeadline.style.backgroundColor = "salmon";
+        dagbokHeadline.value = "du glömmde skriva här"
 
            
        }
        if (dagbokText.value === "") {
 
-        dagbokText.style.backgroundColor = "palevioletred";
+        dagbokText.style.backgroundColor = "salmon";
+        dagbokText.value = "du glömmde skriva här"
            
        }
 
