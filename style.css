@@ -7,7 +7,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: ivory;
+    background-color: #f5fafc;
 }
 
 header {
@@ -19,8 +19,8 @@ header {
     align-items: center;
     width: 100vw;
     height: 15vh;
-    background-color: ivory;
-    color: rgba(47, 79, 79, 0.822);
+    background-color: #f5fafc;
+    color: #112c46;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 5px;
@@ -33,7 +33,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color:ivory;
     font-family: Arial, Helvetica, sans-serif; 
     padding: 30px;
     width: 80vw;
@@ -62,26 +61,22 @@ aside{
 
 #inputSection button{
 
-    background-color:ivory;
-    border: 0;
+    background-color: #f5fafc;
+    border: 1px solid #112c46;
     border-radius: 5px;
     width: 100px;
     height: 40px;
     font-size: 0.8rem;
     padding: 5px;
-    color: rgba(47, 79, 79, 0.822);
+    color: #112c46;
     text-align: center;
     margin: 5px;
     transition: all;
     transition-duration: 0.3s;
-
 }
 
 #inputSection button:hover{
-
-    background-color: rgba(47, 79, 79, 0.822);
-    color: ivory;
-    
+    transform: scale(1.1);
 }
 
 .fieldset {
@@ -90,12 +85,18 @@ aside{
     align-items: center;
     width: 90%;
     height: 100%;
-    background-color: rgba(47, 79, 79, 0.822);
+    background-color: #112c46;
     opacity: 8;
     border: 0px;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 10px;
-    
+    padding-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+
+.fieldset:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 #dagbokHeadline {
@@ -103,12 +104,11 @@ aside{
     height: 10%;
     height: 2.5rem;
     font-size: 1.2rem;
-    font-weight: bold;
-    background-color:ivory;
+    font-weight: 200;
     opacity: 9;
-    color: rgba(47, 79, 79, 0.822);
-    border-radius: 10px;
-    border: 0;
+    color: #112c46;
+    border-radius: 5px;
+    border: none;
     margin: 5px;
     padding: 10px;
     text-align: center;
@@ -116,6 +116,7 @@ aside{
     letter-spacing: 5px;
     transition: all;
     transition-duration: 0.3s;
+    background-color: transparent;
 }
 
 #dagbokText {
@@ -124,16 +125,17 @@ aside{
     font-size: 1rem;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgba(47, 79, 79, 0.822);
-    background-color: ivory;
+    color: #112c46;
     opacity: 9;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 5px;
     padding: 10px;
     letter-spacing: 3px;
     word-spacing: 5px;
     transition: all;
     transition-duration: 0.3s;
+    border: none;
+    background-color: white;
 }
 
 
@@ -145,13 +147,12 @@ aside{
     height: 25px;
     position: relative;
     padding: 2px;
-    opacity: 0.5;
     transition: all;
     transition-duration: 0.3s;
 
 }
 .editBtn:hover{
-    opacity: 1;
+   transform: scale(1.1);
 }
 
 .entryContainer {
@@ -161,13 +162,18 @@ aside{
     flex-direction: column;
     align-items: center;
     width: 90%;
-    background-color: rgba(47, 79, 79, 0.2);
+    background-color: white;
     opacity: 8;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 10px;
     margin: 20px;
     height: fit-content;
-    border: rgba(47, 79, 79, 0.822) 1px solid;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.entryContainer:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -186,14 +192,14 @@ aside{
     align-items: center;
     position: relative;
     left: 49%;
-    background-color:rgba(47, 79, 79, 0.822);
+    background-color:#112c46;
     border: 0;
-    border-radius: 50px;
+    border-radius: 5px;
     width: 20px;
     height: 20px;
     font-size: 0.8rem;
     padding: 5px;
-    color: ivory;
+    color: #f5fafc;
     text-align: center;
     transition: all;
     transition-duration: 0.3s;
@@ -201,25 +207,22 @@ aside{
 }
 
 #myEntries button:hover{
-
-    background-color: salmon;
-    color: ivory;
+    background-color: rgb(253, 68, 47);
+    color: #f5fafc;
+    transform: scale(1.1);
 }
 
 .headlineStyle{
     
     display: flex;
-    background-color: rgba(47, 79, 79, 0.822);
     justify-content: center;
     align-items: center;
     width: fit-content;
     height: 2rem;
-    font-size: 1.2rem;
-    font-weight: lighter;
+    font-size: 1.5rem;
+    font-weight: bold;
     opacity: 9;
-    color: ivory;
-    border-radius: 10px;
-    border: 0px;
+    color: #112c46;
     margin: 5px;
     padding-left: 30px;
     padding-right: 30px;
@@ -238,10 +241,8 @@ aside{
     font-size: 1rem;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgba(47, 79, 79, 0.822);;
+    color: #112c46;
     opacity: 9;
-    border-radius: 10px;
-    border: 0px;
     margin: 5px;
     padding: 30px;
     letter-spacing: 1px;
@@ -259,7 +260,7 @@ aside{
     font-size: 0.6rem;
     padding: 15px;
     letter-spacing: 3px;
-    color: rgba(47, 79, 79, 0.822);
+    color: #112c46;
 }
 
 #previewContainer{
@@ -286,12 +287,13 @@ aside{
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color:rgba(47, 79, 79);
+    background-color:#f5fafc;
     opacity: 8;
     border: 0px;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 10px;
     margin: 0%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 #previewSection input{
@@ -299,11 +301,11 @@ aside{
     width: 90%;
     height: 2.5rem;
     font-size: 1.2rem;
-    font-weight: bold;
-    background-color:ivory;
+    font-weight: 200;
+    background-color:white;
     opacity: 9;
-    color: rgba(47, 79, 79, 0.822);
-    border-radius: 10px;
+    color: #112c46;
+    border-radius: 5px;
     border: 0px;
     margin: 5px;
     padding: 10px;
@@ -314,10 +316,6 @@ aside{
     transition: all;
     transition-duration: 0.3s;
 
-}
-
-#previewSection input:hover{
-    background-color:azure;
 }
 
 #previewSection textarea{
@@ -330,10 +328,10 @@ aside{
     font-size: 1rem;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgba(47, 79, 79, 0.822);
-    background-color:ivory;
+    color: #112c46;
+    background-color:white;
     opacity: 9;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 0px;
     margin: 5px;
     padding: 10px;
@@ -343,15 +341,11 @@ aside{
     transition-duration: 0.3s;
 }
 
-#previewSection textarea:hover{
-    background-color:azure;
-}
-
 #previewSection button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:ivory;
+    background-color:#112c46;
     border: 0;
     border-radius: 5px;
     width: 100px;
@@ -359,14 +353,13 @@ aside{
     font-size: 0.8rem;
     margin: 5px;
     padding: 5px;
-    color: rgba(47, 79, 79, 0.822);
+    color: #f5fafc;
     text-align: center;
     transition: all;
     transition-duration: 0.3s;
 }
 #previewSection button:hover{
-    background-color: darkseagreen;
-    color: ivory;
+    transform: scale(1.1);
 }
 
     
